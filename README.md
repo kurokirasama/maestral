@@ -3,14 +3,24 @@
 [![Documentation Status](https://readthedocs.org/projects/maestral/badge/?version=latest)](https://maestral.readthedocs.io/en/latest/?badge=latest)
 [![codecov](https://codecov.io/gh/SamSchott/maestral/branch/master/graph/badge.svg?token=V0C7IQ1MAU)](https://codecov.io/gh/SamSchott/maestral)
 
-# Archived
+# Maintained Fork (kurokirasama/maestral)
 
-As of 2026-07-28, this project is archived. It's been a fun challenge to develop a
-syncing client, but unfortunately, I find too little time to invest in Maestral these
-days. I've also moved away from using Dropbox myself.
+> [!NOTE]
+> This repository is a maintained fork of [SamSchott/maestral](https://github.com/SamSchott/maestral) (archived upstream in July 2026).
+> It includes critical compatibility fixes for upstream dependencies, specifically `dropbox>=12.0.0` (including `dropbox 12.2.2`), resolving the `TypeError: _DropboxSDK.request_json_string() got an unexpected keyword argument 'extra_headers'` issue that caused the daemon to immediately fall into a `Paused` state on start/resume.
+> 
+> Maintained by [@kurokirasama](https://github.com/kurokirasama) for personal use and freely available to anyone who needs a working, lightweight Maestral client on modern Linux and macOS systems.
 
-Maestral will still remain usable in the medium term, but will no longer be actively
-maintained or receive updates.
+### Quick Installation via pipx
+
+```bash
+# Clean install via pipx:
+pipx install git+https://github.com/kurokirasama/maestral.git
+
+# If updating from an existing installation:
+pipx install --force git+https://github.com/kurokirasama/maestral.git
+```
+
 
 # Maestral <img src="https://raw.githubusercontent.com/SamSchott/maestral/master/src/maestral/resources/maestral.png" align="right" title="Maestral" width="110" height="110">
 
